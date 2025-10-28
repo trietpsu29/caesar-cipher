@@ -12,4 +12,5 @@ This is the sixth project from [The Odin Project](https://github.com/TheOdinProj
 - Arrays
 - Hashes
 - Methods
+- Range
 - Basic Enumerable Methods
