@@ -1,5 +1,7 @@
-def caesar_cipher(plain_text,key)
-    letter_to_num = {
+# frozen_string_literal: true
+
+def caesar_cipher(plain_text, key)
+  letter_to_num = {
     'a' => 0,
     'b' => 1,
     'c' => 2,
@@ -25,22 +27,22 @@ def caesar_cipher(plain_text,key)
     'w' => 22,
     'x' => 23,
     'y' => 24,
-    'z' => 25,
-    }
-    num_to_letter = letter_to_num.invert
-    plain_text.split('').reduce('') do |res,c|
-        if (c >= 'a' && c <= 'z')
-            res += num_to_letter[(letter_to_num[c]+key)%26]
-        elsif (c >= 'A' && c <= 'Z')
-            res += num_to_letter[(letter_to_num[c.downcase]+key)%26].upcase
-        else
-            res +=c
-        end
+    'z' => 25
+  }
+  num_to_letter = letter_to_num.invert
+  plain_text.split('').reduce('') do |res, c|
+    if c >= 'a' && c <= 'z'
+      res + num_to_letter[(letter_to_num[c] + key) % 26]
+    elsif c >= 'A' && c <= 'Z'
+      res + num_to_letter[(letter_to_num[c.downcase] + key) % 26].upcase
+    else
+      res + c
     end
+  end
 end
-puts "Enter your plaintext:"
+puts 'Enter your plaintext:'
 plain_text = gets.chomp
-puts "Enter your key:"
+puts 'Enter your key:'
 key = gets.chomp.to_i
-puts "Result:"
-puts caesar_cipher(plain_text,key)
+puts 'Result:'
+puts caesar_cipher(plain_text, key)
