@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def caesar_cipher(plain_text, key)
   letter_to_num = {
     'a' => 0,
@@ -40,9 +38,3 @@ def caesar_cipher(plain_text, key)
     end
   end
 end
-puts 'Enter your plaintext:'
-plain_text = gets.chomp
-puts 'Enter your key:'
-key = gets.chomp.to_i
-puts 'Result:'
-puts caesar_cipher(plain_text, key)
