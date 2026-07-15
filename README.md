@@ -15,3 +15,4 @@ This is the sixth project from [The Odin Project](https://github.com/TheOdinProj
 - Range
 - Basic Enumerable Methods
 - Linting and RuboCop
+- Testing with RSpec
